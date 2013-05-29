@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>My MVC Application</h1>
+            </div>
+            <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink("[1]Required", "Required", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("[1]StringLength", "StringLength", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("[1]Compare", "Compare", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("[2]Regex", "Regex", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("[3]Remote", "Remote", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("[3]RemoteInArea", "Index", new { area = "Remove", controller = "RemoveTest" })</li>
+                    <li>@Html.ActionLink("[4]AllowHtml", "AllowHtml", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("[5]SingleVal", "Index", new { area = "", controller = "Custom" })</li>
+                    <li>@Html.ActionLink("[6]Register", "Register", new { area = "", controller = "Custom" })</li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+            By <a href="http://mvc.tw">twMVC</a>
+        </div>
+    </div>
+</body>
+</html>
